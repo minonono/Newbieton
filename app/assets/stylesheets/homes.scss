@@ -13,11 +13,36 @@ h1{font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/n
     padding-right: 100px;
 }
 
-#my-index{ text-align: center;
-   
+#my-index{
     
 }
 
 #formfontsize{
     font-size:20pt;
+}
+
+.center{
+    margin:auto;
+}
+
+.text_center{
+    text-align:center;
+}
+
+.width_10{
+    width:10%;
+}
+
+.width_20{
+    width:20%;
+}
+
+.width_70{
+    width:70%;
+}
+
+.myshow{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
 }

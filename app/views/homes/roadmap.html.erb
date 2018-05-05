@@ -1,20 +1,32 @@
-<h1>로드맵</h1>
+<center><img src="/roadmap.png" alt="roadmap"></center>
+
 <div>
+  <center>
+  <img src='/roadmap/<%=@school%>_<%=@f_major%>_<%=@s_major%>.jpeg'> 
+  <h1><%=@school_print_name%></h1>
+  </center>
+</div>
+
+
+<br>
+<br>
+
+<div class='center'>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">제목</th>
-      <th scope="col">작성시간</th>
+      <th class='width_10 text_center' scope="col">#</th>
+      <th class='width_70 text_center' scope="col">제목</th>
+      <th class='width_20 text_center' scope="col">작성 시간</th>
     </tr>
   </thead>
   <tbody>
   <% i = 1 %>
   <% @all_school.each do |x| %>
       <tr onclick="window.location='/homes/show/<%=x.id%>';">
-      <th scope="row"><%= i %></th>
-      <td><%= x.title %></td>
-      <td><%= x.created_at %></td>
+      <th class='text_center' scope="row"><%= i %></th>
+      <td class='text_center'><%= x.title %></td>
+      <td class='text_center'><%= x.created_at %></td>
     </tr>
 
     <% i += 1 %>
@@ -22,9 +34,12 @@
   </tbody>
 </table>
 
+<div class='center' >
 <%if user_signed_in? %>
-<a href='/homes/form/'><button type="button">[새글]</button></a>
+<a href='/homes/form/'><button type="button">새글</button></a>
 <%else%>
 <%end%>
-<a href='/'><button type="button">[뒤로가기]</a>
+
+<a href='/'><button type="button">뒤로가기</a>
+</div>
 </div>

@@ -9,7 +9,9 @@ class CreateHomes < ActiveRecord::Migration
       t.text :content
       t.string :current_user_id
       
-      t.timestamps
+      t.integer :view_count,default: 0
+      
+      t.timestamps.local
     end
   end
 end

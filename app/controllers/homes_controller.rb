@@ -5,11 +5,17 @@ class HomesController < ApplicationController
   
   def roadmap
     @all_school = Home.where(school_name: params[:school_name])
-  
+    @school = params[:school_name]
+    @f_major = params[:f_major]
+    @s_major = params[:s_major]
     if params[:school_name] == "not_selected" or params[:f_major] == "not_selected" or params[:s_major] == "not_selected"
       flash[:success] = "Error!"
       redirect_to '/'
     end
+    
+    if @school == 'kmu'
+      @school_print_name == '국민대학교'
+    end 
     
   end
 
@@ -32,6 +38,10 @@ class HomesController < ApplicationController
   def show
     @find_post = Home.find(params[:post_id])
     @find_post_id = @find_post.current_user_id 
+    
+    
+    @find_post.view_count = @find_post.view_count + 1
+    @find_post.save
   end
   
   def edit
@@ -55,7 +65,8 @@ class HomesController < ApplicationController
     redirect_to "/homes/roadmap/#{@delete_school}"
   end
   
-  def sign_in
+  def school
+   
   end
 
   

@@ -1,10 +1,21 @@
-<h1 align="center">게시글 내용</h1><br/>
-<!--게시글 제목과 내용이 여기에 보여집니다.-->
+<div class="myshow">
+    <%="조회수: #{@find_post.view_count}" %>
 
-제목 : <%= @find_post.title %></br>
-내용 : <%= @find_post.content %><br/>
+<div class="alert alert-secondary" role="alert">
+  비방하는 글은 삼가주세요
+</div><br>
+
+<h1 align="center"><%= @find_post.title %></h1><br/>
+<!--게시글 제목과 내용이 여기에 보여집니다.-->
+<hr>
+
+</br>
+<%= simple_format(@find_post.content) %><br/>
+<hr>
+
 <br/>
 <p><a href ="/homes/roadmap/<%= @find_post.school_name%>">목록</a></p>
+<p><a href = "/homes/index">첫 화면으로!</a></p>
 <% if not user_signed_in? %>
 
 <%elsif not @find_post_id == current_user.email%>
@@ -32,3 +43,5 @@
 <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
 </div>
 <!-- 시티 설치 코드 끝 -->
+</div>
+

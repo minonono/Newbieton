@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   
   get 'homes/roadmap/:school_name' =>'homes#roadmap'
 
-  get 'homes/form'
+  get 'homes/form/'=> 'homes#form'
 
   post 'homes/create'
 
