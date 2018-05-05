@@ -4,8 +4,8 @@ gem 'devise'
 
 gem 'rails_db'
 
-  #게시판 페이지 목록
-gem 'will_paginate', '~> 3.0'
+#게시판 조회수
+gem 'impressionist'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
