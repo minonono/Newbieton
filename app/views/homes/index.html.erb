@@ -30,8 +30,7 @@ h4{ font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/
 <!--onclick="location.href='http://www.example.com'"-->
 
   <% if user_signed_in? %>
-    <button type="button" class="btn btn-outline-dark" onclick="location.href='<%=destroy_user_session_path, method: :delete %>'">로그아웃</button>
-    <button type="button" class="btn btn-outline-dark"><%= link_to "로그아웃", destroy_user_session_path, method: :delete %></button>
+    <button type="button" class="btn btn-outline-dark"><%= link_to "로그아웃", destroy_user_session_path %></button>
   <% else %>
     <button type="button" class="btn btn-outline-dark"><%= link_to "회원 가입", new_user_registration_path %></button>
     <button type="button" class="btn btn-outline-dark"><%= link_to "로그인", new_user_session_path %></button>

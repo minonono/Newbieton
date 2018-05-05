@@ -41,7 +41,7 @@ class HomesController < ApplicationController
     @update_post.content = params[:my_content]
     @update_post.save
     
-    redirect_to "/homes/roadmap/#{Home.find(params[:post_id]).school_name}"
+    redirect_to "/homes/roadmap"
   end
   
   def delete
