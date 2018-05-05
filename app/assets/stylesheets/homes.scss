@@ -1,0 +1,23 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face { font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+h1{font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff') format('woff'); font-weight: normal; font-style: normal; 
+    font-size:1pt;
+}
+#my-form{
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-right: 100px;
+}
+
+#my-index{ text-align: center;
+   
+    
+}
+
+#formfontsize{
+    font-size:20pt;
+}

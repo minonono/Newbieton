@@ -1,0 +1,38 @@
+<center>
+    <br><br>
+    <h1>쌍전공 선배님의 한 마디 글쓰기 게시판!!</h1>
+</center>
+<form id="my-form" action="/homes/create" method='post'> <!-- 게시판 영 역 내 form-->
+        <select class="custom-select" id="inputGroupSelect04" name="school_name">
+        <option selected>학교 선택</option>
+        <option value="knu">강원대학교</option>
+        <option value="kmu">국민대학교</option>
+        <option value="dgu">동국대학교</option>
+        <option value="hufs">한국외국어대학교</option>
+    </select>
+    <select class="custom-select" id="inputGroupSelect04" name="f_major">
+        <option selected>1전공 선택</option>
+        <option value="software">소프트웨어학과</option></option>
+        <option value="business">경영학과</option>
+        <option value="automotive">자동차공학과</option>
+    </select>
+    <select class="custom-select" id="inputGroupSelect04" name="s_major">
+        <option selected>2전공 선택</option>
+        <option value="software">소프트웨어학과</option></option>
+        <option value="business">경영학과</option>
+        <option value="automotive">자동차공학과</option>
+    </select>
+    <br><br><br>
+    
+  <div class="form-group">
+    <label for="board_title" id='formfontsize'>제목</label>
+    <input name="my_title" type="title" class="form-control" id="exampleInputEmail1" placeholder="제목">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1" id='formfontsize'>내용</label>
+    <textarea name ="my_content" class = "form-control" id="exampleTextarea" rows="20" placeholder="해당 학과의 경험담을 남겨주세요."></textarea>
+    <small id="notification" class="form-text text-muted"></small>
+  </div>
+  <button type="submit" class="btn btn-primary">글쓰기</button>
+</form>

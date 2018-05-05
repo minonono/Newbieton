@@ -1,0 +1,52 @@
+        <br><br>
+        <style>
+          .string.email.required, #user_password, #user_password_confirmation{
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+          }
+        </style>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+        <div class="page-header">
+          <h1>회원가입</h1>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+          <form role="form">
+            <div class="form-group">
+              <%= f.input :email, required: true, autofocus: true, :class => 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.input :password, required: true, hint: ("(#{@minimum_password_length}자 이상)" if @minimum_password_length) %>
+            </div>
+            <div class="form-group">
+              <%= f.input :password_confirmation, required: true %>
+              <p class="help-block">비밀번호 확인을 위해 다시한번 입력 해 주세요</p>
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
+                  <%= f.button :submit, "Sign up" %>
+              <button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button>
+            </div>
+          </form>
+        </div>
+
+
+
+
+  <div class="form-inputs">
+  </div>
+
+  <div class="form-actions">
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

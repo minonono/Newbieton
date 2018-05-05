@@ -1,0 +1,126 @@
+<style>
+h1{font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff') format('woff'); font-weight: normal; font-style: normal; 
+    font-size:50pt;
+}
+button{font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff') format('woff'); font-weight: normal; font-style: normal; 
+font-size:50pt;
+}
+
+h4{ font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff') format('woff'); font-weight: normal; font-style: normal; 
+}
+</style>
+<% unless flash[:success].nil? %>
+  <script>alert("모두 선택해주세요")</script>
+<% end %>
+<center>
+  <!--버튼-->
+  <div>
+    <br><br>
+  <button type="button" class="btn btn-outline-primary">당신이</button>
+<button type="button" class="btn btn-outline-secondary">생각하는</button>
+<button type="button" class="btn btn-outline-success">것보다</button>
+<button type="button" class="btn btn-outline-danger">주위에</button>
+<button type="button" class="btn btn-outline-warning">많을</button>
+<button type="button" class="btn btn-outline-info">겁니다.</button>
+<button type="button" class="btn btn-outline-dark"><a href="#ourteam">ㄴㅡㄲㄴㅔ</a></button></button>
+<button type="button" class="btn btn-outline-primary">.newbieton</button>
+<br>
+<br>
+
+<!--onclick="location.href='http://www.example.com'"-->
+
+  <% if user_signed_in? %>
+    <button type="button" class="btn btn-outline-dark" onclick="location.href='<%=destroy_user_session_path, method: :delete %>'">로그아웃</button>
+    <button type="button" class="btn btn-outline-dark"><%= link_to "로그아웃", destroy_user_session_path, method: :delete %></button>
+  <% else %>
+    <button type="button" class="btn btn-outline-dark"><%= link_to "회원 가입", new_user_registration_path %></button>
+    <button type="button" class="btn btn-outline-dark"><%= link_to "로그인", new_user_session_path %></button>
+<% end %>
+  </div>
+  <br><br>
+<h1>학교와 전공을 선택해 주세요</h1>
+<!--토글-->
+<p>
+  <a class="btn btn-danger" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    쌍전공 사용법
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    팀 늒네
+  </div>
+  <div class="input-group" id="my-index">
+                 <form action="/homes/roadmap" method='get' >
+              <br><br>
+                <select class="custom-select" id="inputGroupSelect04" name="school_name" >
+                  <option value="not_selected" selected >학교 선택</option>
+                  <option value="knu">강원대학교</option>
+                  <option value="kmu">국민대학교</option>
+                  <option value="dgu">동국대학교</option>
+                  <option value="hufs">한국외국어대학교</option>
+                </select>
+                <br><br>
+                <select class="custom-select" id="inputGroupSelect04" name="f_major" >
+                  <option value="not_selected" selected>1전공 선택</option>
+                  <option value="software">소프트웨어학과</option></option>
+                  <option value="business">경영학과</option>
+                  <option value="automotive">자동차공학과</option>
+                </select>
+                <br><br>
+                <div>
+                <select class="custom-select" id="inputGroupSelect04" name="s_major">
+                  <option value="not_selected" selected>2전공 선택</option>
+                  <option value="software">소프트웨어학과</option></option>
+                  <option value="business">경영학과</option>
+                  <option value="automotive">자동차공학과</option>
+                </select>
+                </div>
+                
+                  
+                
+                <br><br>
+                <input type="submit" value="검색"> <br><br>
+              
+            </form>
+            
+          
+            
+</div>
+  </div>
+</div>
+
+
+
+<!--여기부터 캐러샐-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="double_e.png" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="i_link.png" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="team.png" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+   <div class="carousel-caption d-none d-md-block">
+    <h5>복수전공,연계전공,부전공자들을 위한</h5>
+    <p>팀 늒네의 야심작</p>
+</div>
+<div class="footer">
+<center><h4 id="ourteam">이성재 허민호 인건 신승협 양송이</h4><center>
+</div>

@@ -1,0 +1,9 @@
+<h1 align="center">게시글 내용</h1><br/>
+<!--게시글 제목과 내용이 여기에 보여집니다.-->
+
+제목 : <%= @find_post.title %></br>
+내용 : <%= @find_post.content %><br/>
+<br/>
+<p><a href ="/homes/roadmap">목록</a></p>
+<P><a href = "/homes/edit/<%= @find_post.id %>">수정</a></p>
+<p><a href = "/homes/delete/<%= @find_post.id %>">삭제</a></p>
