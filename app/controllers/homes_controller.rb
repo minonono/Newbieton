@@ -13,10 +13,6 @@ class HomesController < ApplicationController
       redirect_to '/'
     end
     
-    if @school == 'kmu'
-      @school_print_name == '국민대학교'
-    end 
-    
   end
 
   def form
@@ -38,10 +34,12 @@ class HomesController < ApplicationController
   def show
     @find_post = Home.find(params[:post_id])
     @find_post_id = @find_post.current_user_id 
+    @created_at = @find_post.created_at
     
     
     @find_post.view_count = @find_post.view_count + 1
     @find_post.save
+    
   end
   
   def edit

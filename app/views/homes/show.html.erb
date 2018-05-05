@@ -1,11 +1,12 @@
 <div class="myshow">
-    <%="조회수: #{@find_post.view_count}" %>
+
 
 <div class="alert alert-secondary" role="alert">
   비방하는 글은 삼가주세요
 </div><br>
 
 <h1 align="center"><%= @find_post.title %></h1><br/>
+<p class='text_right'><%=@created_at%> / <%="조회수: #{@find_post.view_count}" %></p>
 <!--게시글 제목과 내용이 여기에 보여집니다.-->
 <hr>
 
@@ -14,16 +15,18 @@
 <hr>
 
 <br/>
-<p><a href ="/homes/roadmap/<%= @find_post.school_name%>">목록</a></p>
-<p><a href = "/homes/index">첫 화면으로!</a></p>
+<div class="text_center"
+<p><a href ="/homes/roadmap/<%= @find_post.school_name%>">목록</a> /
+<a href = "/homes/index">첫 화면으로!</a> /
 <% if not user_signed_in? %>
 
 <%elsif not @find_post_id == current_user.email%>
 
 <%elsif @find_post_id == current_user.email%>
-<P><a href = "/homes/edit/<%= @find_post.id %>">수정</a></p>
-<p><a href = "/homes/delete/<%= @find_post.id %>">삭제</a></p>
+<a href = "/homes/edit/<%= @find_post.id %>">수정</a> /
+<a href = "/homes/delete/<%= @find_post.id %>">삭제</a></p>
 <%end%>
+</div>
 
 <!-- 라이브리 시티 설치 코드 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjI3OC8xMjgxMw==">

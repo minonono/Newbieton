@@ -11,7 +11,7 @@ class CreateHomes < ActiveRecord::Migration
       
       t.integer :view_count,default: 0
       
-      t.timestamps.local
+      t.timestamps
     end
   end
 end
