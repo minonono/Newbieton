@@ -4,7 +4,7 @@
 제목 : <%= @find_post.title %></br>
 내용 : <%= @find_post.content %><br/>
 <br/>
-<p><a href ="/homes/roadmap">목록</a></p>
+<p><a href ="/homes/roadmap/<%= @find_post.school_name%>">목록</a></p>
 <% if not user_signed_in? %>
 
 <%elsif not @find_post_id == current_user.email%>
