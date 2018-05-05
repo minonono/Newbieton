@@ -6,7 +6,8 @@ class CreateHomes < ActiveRecord::Migration
       t.string :f_major
       t.string :s_major
       t.string :title
-      t.string :content
+      t.text :content
+      t.string :current_user_id
       
       t.timestamps
     end
