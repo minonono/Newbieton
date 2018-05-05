@@ -36,7 +36,13 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts_as_commentable_with_threading (2.0.1)
+      activerecord (>= 4.0)
+      activesupport (>= 4.0)
+      awesome_nested_set (>= 3.0)
     arel (6.0.4)
+    awesome_nested_set (3.1.4)
+      activerecord (>= 4.0.0, < 5.3)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -65,8 +71,6 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
-    impressionist (1.6.1)
-      nokogiri (~> 1)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -208,10 +212,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_commentable_with_threading
   byebug
   coffee-rails (~> 4.1.0)
   devise
-  impressionist
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.21)

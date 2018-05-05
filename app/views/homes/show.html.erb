@@ -5,5 +5,30 @@
 내용 : <%= @find_post.content %><br/>
 <br/>
 <p><a href ="/homes/roadmap">목록</a></p>
+<% if not user_signed_in? %>
+
+<%elsif not @find_post_id == current_user.email%>
+
+<%elsif @find_post_id == current_user.email%>
 <P><a href = "/homes/edit/<%= @find_post.id %>">수정</a></p>
 <p><a href = "/homes/delete/<%= @find_post.id %>">삭제</a></p>
+<%end%>
+
+<!-- 라이브리 시티 설치 코드 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNjI3OC8xMjgxMw==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+</div>
+<!-- 시티 설치 코드 끝 -->

@@ -4,8 +4,8 @@ gem 'devise'
 
 gem 'rails_db'
 
-#게시판 조회수
-gem 'impressionist'
+#게시판 댓글
+gem 'acts_as_commentable_with_threading'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

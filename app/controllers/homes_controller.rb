@@ -10,6 +10,7 @@ class HomesController < ApplicationController
       flash[:success] = "Error!"
       redirect_to '/'
     end
+    
   end
 
   def form
@@ -22,6 +23,7 @@ class HomesController < ApplicationController
     board_create.s_major = params[:s_major]
     board_create.title = params[:my_title]
     board_create.content = params[:my_content]
+    board_create.current_user_id = current_user.email
     board_create.save
     
     redirect_to "/homes/roadmap/#{params[:school_name]}"
@@ -29,6 +31,7 @@ class HomesController < ApplicationController
 
   def show
     @find_post = Home.find(params[:post_id])
+    @find_post_id = @find_post.current_user_id 
   end
   
   def edit
@@ -36,12 +39,12 @@ class HomesController < ApplicationController
   end
   
   def update
-    @update_post = Home.find(params[:post_id])
-    @update_post.title = params[:my_title]
-    @update_post.content = params[:my_content]
-    @update_post.save
+    update_post = Home.find(params[:post_id])
+    update_post.title = params[:my_title]
+    update_post.content = params[:my_content]
+    update_post.save
     
-    redirect_to "/homes/roadmap"
+    redirect_to "/homes/roadmap/#{Home.find(params[:post_id]).school_name}"
   end
   
   def delete
