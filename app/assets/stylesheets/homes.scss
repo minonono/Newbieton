@@ -1,7 +1,3 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 
 h1{font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff') format('woff'); font-weight: normal; font-style: normal; 
     font-size:1pt;
@@ -17,31 +13,31 @@ h1{font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/n
 }
 
 #formfontsize{
-    font-size:20pt;
+    font-size: 20pt;
 }
 
 .center{
-    margin:auto;
+    margin: auto;
 }
 
 .text_center{
-    text-align:center;
+    text-align: center;
 }
 
 .text_right{
-    text-align:right;
+    text-align: right;
 }
 
 .width_10{
-    width:5%;
+    width: 5%;
 }
 
 .width_20{
-    width:30%;
+    width: 30%;
 }
 
 .width_70{
-    width:65%;
+    width: 65%;
 }
 
 .myshow{
@@ -49,4 +45,6 @@ h1{font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/n
     padding-right: 150px;
     padding-top: 50px;
 }
-@font-face { font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { 
+    font-family: 'Swagger'; 
+src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff") format('woff'); font-weight: normal; font-style: normal; }
