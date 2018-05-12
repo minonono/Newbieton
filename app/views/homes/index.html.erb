@@ -1,4 +1,6 @@
-<center><img src="/doublemajor.png" alt="doublemajor"></center>
+<div>
+  <center><img src="/doublemajor.png" alt="doublemajor"></center>
+</div>
 <style>
 h1{font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff') format('woff'); font-weight: normal; font-style: normal; 
     font-size:50pt;
@@ -18,21 +20,21 @@ h4{ font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/
 <center>
   <!--버튼-->
   <div>
-    <button type="button" class="btn btn-outline-primary">당신이</button>
-    <button type="button" class="btn btn-outline-secondary">생각하는</button>
-    <button type="button" class="btn btn-outline-success">것보다</button>
-    <button type="button" class="btn btn-outline-danger">주위에</button>
-    <button type="button" class="btn btn-outline-warning">많을</button>
-    <button type="button" class="btn btn-outline-info">겁니다.</button>
-    <button type="button" class="btn btn-outline-dark"><a href="#ourteam">ㄴㅡㄲㄴㅔ</a></button>
+    <button type="button" class="btn btn-outline-primary" onclick="window.location.href='#carouselExampleIndicators'">당신이</button>
+    <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='#carouselExampleIndicators'">생각하는</button>
+    <button type="button" class="btn btn-outline-success" onclick="window.location.href='#carouselExampleIndicators'">것보다</button>
+    <button type="button" class="btn btn-outline-danger" onclick="window.location.href='#carouselExampleIndicators'">주위에</button>
+    <button type="button" class="btn btn-outline-warning" onclick="window.location.href='#carouselExampleIndicators'">많을</button>
+    <button type="button" class="btn btn-outline-info" onclick="window.location.href='#carouselExampleIndicators'">겁니다.</button>
+    <button type="button" class="btn btn-outline-dark" onclick="window.location.href='#ourteam'">ㄴㅡㄲㄴㅔ</button>
     <button type="button" class="btn btn-outline-primary">.newbieton</button>
   <br><br>
 
     <% if user_signed_in? %>
-      <button type="button" class="btn btn-outline-dark"><%= link_to "로그아웃", destroy_user_session_path %></button>
+      <button type="button" class="btn btn-outline-success" onclick="window.location.href='/users/sign_out'">로그아웃</button>
     <% else %>
-      <button type="button" class="btn btn-outline-dark"><%= link_to "회원 가입", new_user_registration_path %></button>
-      <button type="button" class="btn btn-outline-dark"><%= link_to "로그인", new_user_session_path %></button>
+    <button type="button" class="btn btn-outline-success" onclick="window.location.href='/users/sign_up'">회원가입</button>
+    <button type="button" class="btn btn-outline-info" onclick="window.location.href='/users/sign_in'">로그인</button>
     <% end %>
   </div>
   <br><br>
@@ -95,13 +97,13 @@ h4{ font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="/double_e.png" alt="First slide">
+      <img class="d-block w-100" src="/carousel1.png" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/i_link.png" alt="Second slide">
+      <img class="d-block w-100" src="/carousel2.png" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/team.png" alt="Third slide">
+      <img class="d-block w-100" src="/carousel3.png" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -112,10 +114,11 @@ h4{ font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-   <div class="carousel-caption d-none d-md-block">
-    <h5>복수전공,연계전공,부전공자들을 위한</h5>
-    <p>팀 늒네의 야심작</p>
-</div>
+<!--   <div class="carousel-caption d-none d-md-block">-->
+<!--    <h5>복수전공,연계전공,부전공자들을 위한</h5>-->
+<!--    <p>팀 늒네의 야심작</p>-->
+<!--</div>-->
+<br><br><br>
 <div class="footer">
-<center><h4 id="ourteam">이성재 허민호 인건 신승협 양송이</h4><center>
+<center><h4 id="ourteam">이성재 / 허민호 / 인건 / 신승협 / 양송이</h4><center><br><br>
 </div>

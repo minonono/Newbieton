@@ -109,12 +109,10 @@ body {
       <%= f.input :email, required: false, autofocus: true %>
       <%= f.input :password, required: false %>
       <%= f.input :password_confirmation, required: true %>
-      <p class="help-block">비밀번호 확인을 위해 다시한번 입력 해 주세요</p>
-     
+
       <button type="submit" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
       <button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button>
-      <br>
-      <%= render "devise/shared/links" %>
+      <center><%= render "devise/shared/links" %></center>
     </form>
   </div>
 </div>
